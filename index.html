@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="icon" type="image/png" href="/Media/Quiz-APP-Logo.png" class="icon-image" style="border-radius: 50%;">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-quiz-container">
+
+        <img src="/Media/Quiz-APP-Logo.png" alt="Quiz-Logo" class="logo-image">
+
+        <div id="ques-selection-container">
+
+            <label for="category">--Select Category--</label>
+            <select id="category">
+                <option value="9">General Knowlwdge</option>
+                <option value="18">Science & Computers</option>
+                <option value="17">Science & Nature</option>
+                <option value="28">Vehicles</option>
+            </select>
+
+            <label for="difficulty">--Select Difficulty Level--</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <button class="btn" id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="ques-container" class="hide">
+            <div id="ques-number"></div>
+            <div id="ques"></div>
+            <div id="answer-btns" class="btn-container"></div>
+        </div>
+
+        <div id="navigation-buttons" class="hide">
+            <button id="prev-btn" class="btn">&#129052; Previous Question</button>
+            <button id="next-btn" class="btn">Next Question &#129054;</button>
+        </div>
+
+        <!-- Submit Button and Score Display -->
+        <button id="submit-btn" class="btn hide">Submit Quiz</button>
+        <div id="score-container" class="score hide"></div>
+
+    </div>
+
+    <script src="/script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #fafeef, #fcf9a5, gold);
+}
+
+/* Quiz Container */
+.main-quiz-container {
+    width: 30vw;
+    height: 80vh;
+    background-color: #fcf9a5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+                rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.main-quiz-container:hover{
+    outline: .2px solid #474402;
+    cursor: pointer;
+}
+
+.logo-image{
+    width: 56%;
+}
+
+/* Selection Container */
+#ques-selection-container {
+    width: auto;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
+}
+
+#category, #difficulty {
+    font-size: 16px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    background-color: #fafeef;
+}
+
+/* Question and Answer Display */
+#ques-container {
+    background-color: #fafeef;
+    padding: 30px;
+    margin: 10px 0px;
+    border-radius: 12px;
+}
+
+#ques-number {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#ques {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #fcf9a5;
+    padding: 10px;
+    border: none;
+    outline: 0.1px solid black;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fafeef;
+}
+
+#start-btn {
+    margin-top: 30px;
+    background-color: gold;
+    border-radius: 8px;
+    outline: 0.1px solid black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#start-btn:hover {
+    background-color: rgb(255, 235, 119);
+    transition: background-color 0.2s ease;
+}
+
+#next-btn, #prev-btn {
+    width: 190px;
+    border-radius: 8px;
+    background-color: gold;
+}
+
+#next-btn:hover, #prev-btn:hover {
+    background-color: rgb(255, 235, 119);
+    transition: background-color 0.2s ease;
+}
+
+/* Navigation Buttons */
+#navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Feedback Colors */
+.correct {
+    background-color: #00ff08;
+}
+
+.thisCorrect {
+    background-color: #4cfb52;
+}
+
+.wrong {
+    background-color: #ff0000;
+}
+
+/* Score Display */
+.score {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#score-container {
+    background-color: #fafeef;
+    outline: .2px solid #ff0000;
+    padding: 12px 8px;
+    margin: 20px 30px;
+}
+
+/* Utility Classes */
+.hide {
+    display: none !important;
+}
+
+.disabled {
+    opacity: 0.7;
+    cursor: no-drop;
+    pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-quiz-container {
+        width: 70vw;
+        height: auto;
+        padding: 15px;
+    }
+
+    label, #ques, #ques-number {
+        font-size: 14px;
+    }
+
+    #ques {
+        font-size: 15px;
+    }
+
+    #category, #difficulty {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #start-btn {
+        font-size: 16px;
+    }
+
+    #next-btn, #prev-btn {
+        width: 45%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-container {
+        grid-template-columns: 100%;
+        gap: 8px;
+    }
+
+    #score-container {
+        margin: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-quiz-container {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    label, #ques, #ques-number {
+        font-size: 12px;
+    }
+
+    #ques {
+        font-size: 13px;
+    }
+
+    #category, #difficulty {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    #start-btn, #next-btn, #prev-btn {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    #navigation-buttons {
+        flex-direction: column;
+    }
+
+    .btn-container {
+        grid-template-columns: 100%;
+    }
+
+    #score-container {
+        margin: 10px;
+        font-size: 0.9rem;
+    }
+}
